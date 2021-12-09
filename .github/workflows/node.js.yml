@@ -46,7 +46,4 @@ jobs:
         # The message for the commit.
         # Default: 'Commit from GitHub Actions (name of the workflow)'
         message: 'React Build'
-        # The arguments for the `git rm` command (see the paragraph below for more info)
-        # Default: ''
-        remove: './build/*'
 
