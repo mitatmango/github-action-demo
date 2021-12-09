@@ -26,6 +26,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+    - name: Remove File
+      uses: JesseTG/rm@v1.0.0
+      with:
+        path: ./build
     - name: Install dependencies
       run: npm install
     - name: Build
