@@ -13,6 +13,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    if: github.event.review.state == 'approved'
 
     strategy:
       matrix:
@@ -52,4 +53,7 @@ jobs:
         # The message for the commit.
         # Default: 'Commit from GitHub Actions (name of the workflow)'
         message: 'React Build'
+        # The name of the branch to use, if different from the one that triggered the workflow.
+        # Default: the branch that triggered the run
+        branch: master
 
