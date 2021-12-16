@@ -22,7 +22,7 @@ jobs:
           ignore_branches: ''
 
           # Disable dry run and actually get stuff deleted
-          dry_run: yes
+          dry_run: no
 
       - name: Get output
         run: "echo 'Deleted branches: ${{ steps.delete_stuff.outputs.deleted_branches }}'"
