@@ -18,7 +18,7 @@ jobs:
         id: delete_stuff
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          last_commit_age_days: 100
+          last_commit_age_days: 1
           ignore_branches: ''
 
           # Disable dry run and actually get stuff deleted
