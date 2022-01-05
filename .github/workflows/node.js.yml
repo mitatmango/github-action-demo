@@ -60,5 +60,5 @@ jobs:
         branch: master
     - name: Test
       working-directory: ./src
-      run: npm install
+      run: npm install && pwd
 
