@@ -9,6 +9,8 @@ on:
     branches: [ master ]
     paths:
       - src/**
+  # Allow workflow to be manually run from the GitHub UI
+  workflow_dispatch:
 
 jobs:
   build:
@@ -56,4 +58,7 @@ jobs:
         # The name of the branch to use, if different from the one that triggered the workflow.
         # Default: the branch that triggered the run
         branch: master
+    - name: Test
+      run: npm install
+      working-directory: ./src
 
