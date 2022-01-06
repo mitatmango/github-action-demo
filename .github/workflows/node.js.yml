@@ -9,14 +9,12 @@ on:
     branches: [ master ]
     paths:
       - ./**.js
-  # Allow workflow to be manually run from the GitHub UI
-  workflow_dispatch:
 
 jobs:
   build:
 
     runs-on: ubuntu-latest
-#     if: github.event.pull_request.merged == true
+    if: github.event.pull_request.merged == true
 
     strategy:
       matrix:
