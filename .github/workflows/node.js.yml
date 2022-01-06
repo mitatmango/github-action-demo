@@ -8,11 +8,11 @@ on:
     types: [ closed ]
     branches: [ master ]
     paths:
-      - ./**.js
+      - /**.js
   push:
     branches: [ master ]
     paths:
-      - ./**.js
+      - /**.js
 
 jobs:
   build:
