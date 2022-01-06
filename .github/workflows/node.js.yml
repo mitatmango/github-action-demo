@@ -4,11 +4,6 @@
 name: Node.js CI
 
 on:
-  pull_request:
-    types: [ closed ]
-    branches: [ master ]
-    paths:
-      - "**.js"
   push:
     branches: [ master ]
     paths:
@@ -18,7 +13,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true
+#     if: github.event.pull_request.merged == true
 
     strategy:
       matrix:
