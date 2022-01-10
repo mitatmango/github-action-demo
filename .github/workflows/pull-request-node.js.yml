@@ -9,12 +9,13 @@ on:
     branches: [ staging ]
     paths:
       - "**.js"
+  workflow_dispatch:
 
 jobs:
   build:
 
     runs-on: ubuntu-latest
-#     if: github.event.pull_request.merged == true
+    if: (github.event.pull_request && github.event.pull_request.merged == true) || github.event.workflow_dispatch
 
     strategy:
       matrix:
