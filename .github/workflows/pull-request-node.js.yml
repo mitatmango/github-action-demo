@@ -6,7 +6,7 @@ name: Pull Request - Node.js CI
 on:
   pull_request:
     types: [closed]
-    branches: [ master ]
+    branches: [ staging ]
     paths:
       - "**.js"
 
@@ -53,9 +53,6 @@ jobs:
         # The message for the commit.
         # Default: 'Commit from GitHub Actions (name of the workflow)'
         message: 'React Build'
-        # The name of the branch to use, if different from the one that triggered the workflow.
-        # Default: the branch that triggered the run
-        branch: master
     - name: Test
       working-directory: ./src
       run: npm install && pwd
