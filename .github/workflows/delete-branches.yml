@@ -10,4 +10,6 @@ jobs:
     name: Satisfy my repo CDO
     steps:
       - name: Get output
-        run: "ls ~"
+        run: |
+          touch ~/temp-file
+          ls ~
